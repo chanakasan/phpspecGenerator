@@ -1,0 +1,12 @@
+function its_<%= f %>_property_is_null_by_default()
+{
+    $this->get<%= f.capitalize %>()->shouldReturn(null);
+}
+
+function its_<%= f %>_property_is_mutable()
+{
+    $someValue = 'some value';
+    $this->set<%= f.capitalize %>($someValue);
+    $this->get<%= f.capitalize %>()->shouldReturn($someValue);
+}
+
